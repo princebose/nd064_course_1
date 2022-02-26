@@ -1,0 +1,11 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.128.0.2:5000/ (Press CTRL+C to quit)
+INFO:app:Main request successful
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2022 18:56:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2022 18:56:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2022 18:57:03] "[33mGET /healthz HTTP/1.1[0m" 404 -
+INFO:app:Status request successful - Response (<Response 26 bytes [200 OK]>)
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2022 18:57:08] "GET /status HTTP/1.1" 200 -
+INFO:app:Metrics request successful - Response (<Response 83 bytes [200 OK]>)
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2022 18:57:12] "GET /metrics HTTP/1.1" 200 -
