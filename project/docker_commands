@@ -8,6 +8,7 @@ docker run -d -p 7111:3111 techtrends
 docker logs 4fb86c39fb9c
 
 ## Logs from the container running the TechTrends application
+PS C:\Users\pbose2\PycharmProjects\nd064_course_1_Prince\project\techtrends> docker logs -f c551e9b49f0d
  * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -15,60 +16,59 @@ docker logs 4fb86c39fb9c
  * Debug mode: on
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 727-978-062
+ * Debugger PIN: 234-842-670
  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://172.26.173.183:3111/ (Press CTRL+C to quit)
-10.128.0.2 - - [26/Feb/2022 18:03:13] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:13] "GET /static/css/main.css HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:13] "GET /favicon.ico HTTP/1.1" 404 -
-[2022-02-26 18:03:16,124] INFO in app: About Us page rendered!
-2022-02-26 18:03:16,124 About Us page rendered!
-10.128.0.2 - - [26/Feb/2022 18:03:16] "GET /about HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:16] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:19] "GET /create HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:19] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:22,687] INFO in app: Article "asd" was created!
-2022-02-26 18:03:22,687 Article "asd" was created!
-10.128.0.2 - - [26/Feb/2022 18:03:22] "POST /create HTTP/1.1" 302 -
-10.128.0.2 - - [26/Feb/2022 18:03:22] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:22] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:24] "GET /create HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:24] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:26,916] INFO in app: Article cannot be created without a title!
-2022-02-26 18:03:26,916 Article cannot be created without a title!
-10.128.0.2 - - [26/Feb/2022 18:03:26] "POST /create HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:27] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:28,546] INFO in app: About Us page rendered!
-2022-02-26 18:03:28,546 About Us page rendered!
-10.128.0.2 - - [26/Feb/2022 18:03:28] "GET /about HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:28] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:29] "GET /create HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:29] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:30,791] INFO in app: About Us page rendered!
-2022-02-26 18:03:30,791 About Us page rendered!
-10.128.0.2 - - [26/Feb/2022 18:03:30] "GET /about HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:30] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:31] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:31] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:33,046] INFO in app: Article "KubeCon + CloudNativeCon 2021" retrieved!
-2022-02-26 18:03:33,046 Article "KubeCon + CloudNativeCon 2021" retrieved!
-10.128.0.2 - - [26/Feb/2022 18:03:33] "GET /2 HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:33] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:34] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:34] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:35,397] INFO in app: Article "2020 CNCF Annual Report" retrieved!
-2022-02-26 18:03:35,397 Article "2020 CNCF Annual Report" retrieved!
-10.128.0.2 - - [26/Feb/2022 18:03:35] "GET /1 HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:35] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:35] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:36] "GET /static/css/main.css HTTP/1.1" 304 -
-[2022-02-26 18:03:39,053] INFO in app: Article "asd" retrieved!
-2022-02-26 18:03:39,053 Article "asd" retrieved!
-10.128.0.2 - - [26/Feb/2022 18:03:39] "GET /10 HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:39] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:40] "GET / HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:41] "GET /static/css/main.css HTTP/1.1" 304 -
-10.128.0.2 - - [26/Feb/2022 18:03:51] "GET /healthz HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:57] "GET /metrics HTTP/1.1" 200 -
-10.128.0.2 - - [26/Feb/2022 18:03:59] "GET /metrics HTTP/1.1" 200 -
+ * Running on http://172.26.164.192:3111/ (Press CTRL+C to quit)
+10.128.0.2 - - [26/Feb/2022 18:53:07] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:07] "GET /static/css/main.css HTTP/1.1" 200 -
+[2022-02-26 18:53:08,509] INFO in app: Article "2020 CNCF Annual Report" retrieved!
+2022-02-26 18:53:08,509 Article "2020 CNCF Annual Report" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:08] "GET /1 HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:08] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:10,863] INFO in app: Article "CNCF Cloud Native Interactive Landscape" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:10] "GET /4 HTTP/1.1" 200 -
+2022-02-26 18:53:10,863 Article "CNCF Cloud Native Interactive Landscape" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:10] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:12] "GET /create HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:13] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:15,339] INFO in app: Article cannot be created without a title!
+2022-02-26 18:53:15,339 Article cannot be created without a title!
+10.128.0.2 - - [26/Feb/2022 18:53:15] "POST /create HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:15] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:16,486] INFO in app: Article "asd" was created!
+2022-02-26 18:53:16,486 Article "asd" was created!
+10.128.0.2 - - [26/Feb/2022 18:53:16] "POST /create HTTP/1.1" 302 -
+10.128.0.2 - - [26/Feb/2022 18:53:16] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:17] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:17] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:17] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:18,821] INFO in app: Article "KubeCon + CloudNativeCon 2021" retrieved!
+2022-02-26 18:53:18,821 Article "KubeCon + CloudNativeCon 2021" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:18] "GET /2 HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:18] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:19,888] INFO in app: About Us page rendered!
+10.128.0.2 - - [26/Feb/2022 18:53:19] "GET /about HTTP/1.1" 200 -
+2022-02-26 18:53:19,888 About Us page rendered!
+10.128.0.2 - - [26/Feb/2022 18:53:20] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:21] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:21] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:22,620] INFO in app: Article "asdas" retrieved!
+2022-02-26 18:53:22,620 Article "asdas" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:22] "GET /7 HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:22] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:24,471] INFO in app: About Us page rendered!
+2022-02-26 18:53:24,471 About Us page rendered!
+10.128.0.2 - - [26/Feb/2022 18:53:24] "GET /about HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:24] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:25] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:26] "GET /static/css/main.css HTTP/1.1" 304 -
+[2022-02-26 18:53:27,401] INFO in app: Article "asd" retrieved!
+2022-02-26 18:53:27,401 Article "asd" retrieved!
+10.128.0.2 - - [26/Feb/2022 18:53:27] "GET /8 HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:27] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:28] "GET / HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:28] "GET /static/css/main.css HTTP/1.1" 304 -
+10.128.0.2 - - [26/Feb/2022 18:53:31] "GET /metrics HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:35] "GET /metrics HTTP/1.1" 200 -
+10.128.0.2 - - [26/Feb/2022 18:53:44] "GET /healthz HTTP/1.1" 200 -
