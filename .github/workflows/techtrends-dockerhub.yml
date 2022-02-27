@@ -8,28 +8,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      -
+        name: Checkout
         uses: actions/checkout@v2
 
-      - name: Login to DockerHub
+      -
+        name: Login to DockerHub
         uses: docker/login-action@v1
         with:
           username: ${{secrets.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
-
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       -
         name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
           file: ./Dockerfile
-##          platforms: linux/amd64
+          platforms: linux/amd64
           push: true
           tags: {{Udacity_CNAA_Repo}}/techtrends:latest
-#
-##      - name: Build and push
-##        uses: docker/build-push-action@v2
-##        with:
-##          context: .
-##          push: true
-##          tags: user/app:latest
