@@ -17,19 +17,19 @@ jobs:
           username: ${{secrets.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
 
-      -
-        name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: ./project/techtrends
-          file: ./Dockerfile
-#          platforms: linux/amd64
-          push: true
-          tags: {{Udacity_CNAA_Repo}}/techtrends:latest
-
-#      - name: Build and push
+#      -
+#        name: Build and push
 #        uses: docker/build-push-action@v2
 #        with:
-#          context: .
+#          context: ./project/techtrends
+#          file: ./Dockerfile
+##          platforms: linux/amd64
 #          push: true
-#          tags: user/app:latest
+#          tags: {{Udacity_CNAA_Repo}}/techtrends:latest
+#
+##      - name: Build and push
+##        uses: docker/build-push-action@v2
+##        with:
+##          context: .
+##          push: true
+##          tags: user/app:latest
