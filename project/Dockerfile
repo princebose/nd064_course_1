@@ -1,6 +1,6 @@
-FROM python:3-windowsservercore
+FROM python:3.8
 
-COPY . /app
+COPY /techtrends/. /app
 WORKDIR /app
 
 EXPOSE 3111
