@@ -39,7 +39,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
 
-
 # Define the main route of the web application
 @app.route('/')
 def index():
@@ -104,7 +103,7 @@ def health_endpoint():
 def metrics_endpoint():
     global number_of_connections
     return app.response_class(
-        response=json.dumps({"db_connection-count": number_of_connections,
+        response=json.dumps({"db_connection_count": number_of_connections,
                              "post_count": get_post_count()}),
         status=200,
         mimetype='application/json'
@@ -113,7 +112,6 @@ def metrics_endpoint():
 
 # start the application on port 3111
 if __name__ == "__main__":
-
     # Logging Configuration
     log_file_handler = logging.FileHandler("app.log")
     log_stream_handler = logging.StreamHandler(sys.stdout)
