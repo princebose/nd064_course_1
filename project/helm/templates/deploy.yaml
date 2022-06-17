@@ -30,15 +30,15 @@ spec:
         - containerPort: {{ .Values.containerPort }}
           protocol: TCP
           
-          livenessProbe:
-            httpGet:
-              port: {{ .Values.livenessProbe.httpGet.port }}
-              path: {{ .Values.livenessProbe.httpGet.path }}
+        livenessProbe:
+          httpGet:
+            port: {{ .Values.livenessProbe.httpGet.port }}
+            path: {{ .Values.livenessProbe.httpGet.path }}
 
-          readinessProbe:
-            httpGet:
-              port: {{ .Values.readinessProbe.httpGet.port }}
-              path: {{ .Values.readinessProbe.httpGet.path }}
+        readinessProbe:
+          httpGet:
+            port: {{ .Values.readinessProbe.httpGet.port }}
+            path: {{ .Values.readinessProbe.httpGet.path }}
 
         resources:
           requests:
