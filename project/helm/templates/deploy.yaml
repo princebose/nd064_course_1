@@ -27,11 +27,9 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends-latest
         ports:
-          - containerPort: {{ .Values.containerPort }}
-            protocol: TCP
-          ## Define the rules for the liveness probes.
-          ## For example, verify the application on the main route `/`,
-          ## on application port 6112. If the application is not responsive, then the pod will be restarted automatically.
+        - containerPort: {{ .Values.containerPort }}
+          protocol: TCP
+          
           livenessProbe:
             httpGet:
               port: {{ .Values.livenessProbe.httpGet.port }}
