@@ -1,0 +1,53 @@
+## Parameterized Deploy Template
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: techtrends
+  name: techtrends
+  namespace: {{ .Values.namespace.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: techtrends
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: techtrends
+        tag: latest
+    spec:
+      containers:
+      - image:  {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: techtrends-latest
+        ports:
+          - containerPort: {{ .Values.containerPort }}
+            protocol: TCP
+          ## Define the rules for the liveness probes.
+          ## For example, verify the application on the main route `/`,
+          ## on application port 6112. If the application is not responsive, then the pod will be restarted automatically.
+          livenessProbe:
+            httpGet:
+              port: {{ .Values.livenessProbe.httpGet.port }}
+              path: {{ .Values.livenessProbe.httpGet.path }}
+## Define the rules for the readiness probes.
+## For example, verify the application on the main route `/`,
+## on application port 6112. If the application is responsive, then traffic will be sent to this pod.
+          readinessProbe:
+            httpGet:
+              port: {{ .Values.readinessProbe.httpGet.port }}
+              path: {{ .Values.readinessProbe.httpGet.path }}
+
+        resources:
+          requests:
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}
+          limits:
+            memory: {{ .Values.resources.limits.memory }}
+            cpu: {{ .Values.resources.limits.cpu }}

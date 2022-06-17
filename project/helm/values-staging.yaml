@@ -1,0 +1,19 @@
+## provide the name of the namespace
+namespace:
+  name: staging
+
+## service details
+service:
+  port: 4111
+
+## set the number of replicas for an application
+replicaCount: 3
+
+## setting up resource limits
+resources:
+  requests:
+    memory: 90Mi
+    cpu: 300m
+  limits:
+    memory: 128Mi
+    cpu: 500m
