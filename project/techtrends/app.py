@@ -57,7 +57,7 @@ def post(post_id):
         app.logger.info("Post with id: \"{}\" does not exist!".format(post_id))
         return render_template('404.html'), 404
     else:
-        app.logger.info("Article \"{}\" retrieved!".format(post[2]))
+        app.logger.info("Article - \"{}\" retrieved!".format(post[2]))
         return render_template('post.html', post=post)
 
 
